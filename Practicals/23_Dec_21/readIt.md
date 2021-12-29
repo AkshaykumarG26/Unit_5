@@ -3,7 +3,7 @@
  to create new project use below cmd
  => create-react-app projectName
  and after that to run the react app 
- => npm run  ------> this can be seen in package.json file
+ => npm start  ------> this can be seen in package.json file
 
  edit the app.js file in src folder to see the changes 
  open app.js delete the entire header part of the code  
