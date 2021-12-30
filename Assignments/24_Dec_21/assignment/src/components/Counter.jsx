@@ -1,6 +1,8 @@
-import 'counter.css'
+import { useState } from 'react';
 
-function Counter(children){
+
+
+function Counter(){
 // const [data, setData] = useState(initial value)
   // if u do not put any value it always be undefined so it is good to put inital value
   const [count, setCount] = useState(0)
@@ -22,13 +24,13 @@ function Counter(children){
   }
 
   return (
-    <div className="App">
+    <>
         <h3>Counter: {count}</h3>
       <button onClick={increment}>Increment</button>
       <button onClick={Decrement}>Decrement</button>
       <button onClick={Double}>Double</button>
       <button onClick={Reset}>Reset</button>
-    </div>
+    </>
   );
 }
 
