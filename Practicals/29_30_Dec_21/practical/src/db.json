@@ -1,34 +1,5 @@
 {
   "todos": [
-    {
-      "title": "q",
-      "status": false,
-      "id": 4
-    },
-    {
-      "title": "learcn",
-      "status": false,
-      "id": 5
-    },
-    {
-      "title": "learca;adj",
-      "status": false,
-      "id": 9
-    },
-    {
-      "title": "amol",
-      "status": false,
-      "id": 10
-    },
-    {
-      "title": "a",
-      "status": false,
-      "id": 11
-    },
-    {
-      "title": "aksj",
-      "status": false,
-      "id": 12
-    }
+    
   ]
 }

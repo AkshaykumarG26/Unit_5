@@ -1,33 +1,32 @@
 function tileOfTogetherness (n,m){
     var text = n.toString().split("").map(Number)
     var sum = 0;
-    // console.log(text)
     for (var i = 0; i < text.length; i++){
+        sum = sum + text[i]
       for (var j = 0; j < text.length; j++){
-        sum = sum + text[j]
-        // return n
+        if (n+sum != m){
+          sum = sum + text[j]
+        }else{
+          break
+        }
       }
     }
-    console.log(n + sum)
-
-
-    
-
-    
-    // if (n == m){
-    //   console.log(m)
-    // }else{
-    //   console.log(-1)
-    // }
-    
-    // return (n = n + sum)
+    if (n+sum == m){
+      console.log(m)
+    }else{
+      console.log(-1)
+    }     
 }
 
-tileOfTogetherness(32,47)
+// tileOfTogetherness(32,47)
 
 function runProgram(input) {
     input = input.trim().split(" ");
+    var n = +input[0]
+    var m = +input[1]
     // console.log(input)
+    tileOfTogetherness(32,47)
+
     
   }
   

@@ -8,17 +8,17 @@ export const Todo = () => {
 
     useEffect(() => {
         getTodo()
-    }, [])
+    },[])
 
 
     const getTodo = () => {
         fetch("http://localhost:3001/todos")
         .then((d) => d.json())
         .then((res) => {
-            console.log(res)
             setList(res)
         })
     }
+
 
 
     const handleTodo = () => {
@@ -32,6 +32,8 @@ export const Todo = () => {
             headers: {
                 "content-type": "application/json"
             }
+        }).then(() => {
+            getTodo()
         })
     }
 

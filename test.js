@@ -1,24 +1,18 @@
-function identifyPrime(num) {
-    // Write code here
-
-    var isPrime = true
-    if (num === 1) {
-    console.log();
-}else if (num > 1) {    
-    for (let i = 2; i < num; i++) {
-        if (num % i == 0) {
-            isPrime = false;
-            break;
+function masaiSchoolHurray(N) {
+    for (var i = 1; i <= N; i++) {
+        if (i % 35 == 0) {
+            console.log("Masai School")
+        }
+        else if (i % 7 == 0) {
+            console.log("Masai")
+        }
+        else if (i % 5 == 0) {
+            console.log("School")
+        }
+        else {
+            console.log("Hurray!")
         }
     }
-
-    if(isPrime) {
-        console.log("Yes");
-    } else {
-        console.log("No");
-    }
-
-}
 }
 
-identifyPrime(13)
+console.log(masaiSchoolHurray(7))
