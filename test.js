@@ -1,18 +1,20 @@
-function masaiSchoolHurray(N) {
-    for (var i = 1; i <= N; i++) {
-        if (i % 35 == 0) {
-            console.log("Masai School")
-        }
-        else if (i % 7 == 0) {
-            console.log("Masai")
-        }
-        else if (i % 5 == 0) {
-            console.log("School")
-        }
-        else {
-            console.log("Hurray!")
+function reverseWords(s)
+{
+    // code here
+    var out = ''
+    var str = s.split(".")
+    for (var i = str.length-1; i >= 0; i--){
+        if (i === 0){
+            out = out + str[i]
+        }else{
+            out = out + str[i] + '.'
         }
     }
+    
+    console.log(out)
+
+    
+    
 }
 
-console.log(masaiSchoolHurray(7))
+reverseWords("i.like.this.program.very.much")
