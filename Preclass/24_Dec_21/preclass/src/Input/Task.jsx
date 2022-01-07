@@ -3,12 +3,13 @@ import { TaskItem } from "./Taskitem";
 
 function Task() {
 
+
     const [query, setQuery] = useState("")
 
     const [tasks, setTasks] = useState([])
 
     const handleChange = (e) => {
-        const {value} = e.target
+        const { value } = e.target
         // console.log(value)
         setQuery(value)
     }
@@ -22,15 +23,17 @@ function Task() {
         let newTasks = [...tasks, payload]
         setTasks(newTasks)
     }
-    return(
+
+
+    return (
         <div>
             <h2>Tasks</h2>
             <div>
-                <input 
-                type="text" 
-                value={query} 
-                onChange={handleChange} 
-                placeholder="Enter Something"
+                <input
+                    type="text"
+                    value={query}
+                    onChange={handleChange}
+                    placeholder="Enter Something"
                 />
 
                 <button onClick={handleAdd}>Add</button>
@@ -38,20 +41,16 @@ function Task() {
             </div>
 
             <div>
-                { tasks.map(item => {
-                    return <TaskItem 
-                    title = {item.title} 
-                    status = {item.status} 
-                    
+                {tasks.map(item => {
+                    return <TaskItem
+                      {...item}
+
                     />
-                }) }
+                })}
             </div>
         </div>
     )
 
 }
-
-
-
 
 export default Task

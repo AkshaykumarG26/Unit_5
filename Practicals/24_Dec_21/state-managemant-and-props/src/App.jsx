@@ -13,11 +13,12 @@ function App() {
 
       {
         arr.map((e) => (
-          <Todos num={e}>
-            <h1>Test</h1>
+          <Todos children={e}>
+            
           </Todos>
         ))
       }
+
 
     </div>
   );

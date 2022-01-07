@@ -1,23 +1,22 @@
 function tileOfTogetherness (n,m){
-    var text = n.toString().split("").map(Number)
-    var sum = 0;
-    for (var i = 0; i < text.length; i++){
-        sum = sum + text[i]
-      for (var j = 0; j < text.length; j++){
-        if (n+sum != m){
-          sum = sum + text[j]
-        }else{
-          break
-        }
+  var text = n.toString().split("").map(Number)
+  var sum = 0;
+  for (var i = 0; i < text.length; i++){
+      sum = sum + text[i]
+    for (var j = 0; j < text.length; j++){
+      if (n+sum != m){
+        sum = sum + text[j]
+      }else{
+        break
       }
     }
-    if (n+sum == m){
-      console.log(m)
-    }else{
-      console.log(-1)
-    }     
+  }
+  if (n+sum == m){
+    console.log(m)
+  }else{
+    console.log(-1)
+  }     
 }
-
 // tileOfTogetherness(32,47)
 
 function runProgram(input) {

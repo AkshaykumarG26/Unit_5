@@ -2,8 +2,11 @@ import "./todo.css"
 
 // props
 
-function Todos({num, children}){
-    return <div className="main">{children}</div>
+function Todos({ children}){
+    
+    return <div className="main">
+        {" "}
+        Todos: {children}</div>
 }
 
 export default Todos;

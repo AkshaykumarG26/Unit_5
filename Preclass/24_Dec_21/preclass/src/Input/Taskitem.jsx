@@ -4,7 +4,7 @@ function TaskItem({ title, status }){
     return(
 
         <div>
-            <h3>{`${title} - ${status}`}</h3>
+            <h3 >{`${title} - ${status}` }</h3>
         </div>
     )
 }

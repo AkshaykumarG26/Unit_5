@@ -1,20 +1,54 @@
-function reverseWords(s)
-{
-    // code here
-    var out = ''
-    var str = s.split(".")
-    for (var i = str.length-1; i >= 0; i--){
-        if (i === 0){
-            out = out + str[i]
-        }else{
-            out = out + str[i] + '.'
+function printNums(num){
+    for (var i = 0; i < num; i++){
+        // var ak = ""
+        for (var j = 1; j <= num; j++){
+            // ak = ak + j ;
+            if (j > i){
+                break
+            }
+            console.log(j)
         }
+        // console.log(ak)
     }
-    
-    console.log(out)
-
-    
-    
 }
 
-reverseWords("i.like.this.program.very.much")
+
+
+
+function printNums2(num){
+    for (var i = 0; i < num; i++){
+        var ak = ""
+        for (var j = 1; j <= num; j++){
+            ak = ak + j + " ";
+        }
+        console.log(ak)
+    }
+}
+
+/*
+op
+1 2 3 4
+1 2 3 4
+1 2 3 4
+1 2 3 4
+*/
+
+
+function start(num){
+    for (var i = 0; i < num; i++){
+        var ak = "* "
+        for (var j = 1; j <= num; j++){
+            ak = ak + "* " ;
+        }
+        
+        console.log(ak)
+    }
+}
+
+/* 
+op  
+* * * *
+* * * *
+* * * *
+* * * * 
+*/

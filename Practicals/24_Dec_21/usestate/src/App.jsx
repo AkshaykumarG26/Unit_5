@@ -55,6 +55,7 @@ function App() {
   }
 
 
+
   return (
     <div className="App">
       <h4>This is for 3 differernt functions</h4>
@@ -76,6 +77,7 @@ function App() {
       
       <br /><br /><br />
 
+{/* conditional rendering */}
       <h4>This is to hide the buttons afetr it met criteria</h4>
       <h3>Counter 3 : {count3}</h3>
       {count3 < 10 && (

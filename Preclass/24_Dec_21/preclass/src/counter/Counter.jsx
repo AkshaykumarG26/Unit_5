@@ -5,7 +5,12 @@ function Counter() {
   const [counter, setCounter] = useState(0);
 
   const handleCounter = (value) => {
-    setCounter(counter+value)
+    if (value === 2){
+      setCounter( counter * value)
+    }else{
+
+      setCounter(counter + value)
+    }
   }
 
   return (
@@ -14,6 +19,8 @@ function Counter() {
       <h2>{counter}</h2>
       <button onClick={() => handleCounter(1)}>Increment</button>
       <button onClick={() => handleCounter(-1)}>Decrement</button>
+      <button onClick={() => handleCounter(2)}>Double</button>
+      <button onClick={() => handleCounter(-counter)}>Reset</button>
     </>
   );
 }

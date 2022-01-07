@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 
 const Child = ({value}) => (
@@ -21,7 +22,7 @@ function  Siblings() {
     }
 
     return(
-        <div>
+        <>
             <h2>Siblings</h2>
             <Child 
                 value={count}
@@ -32,7 +33,7 @@ function  Siblings() {
             <Button label="+" handleClick = {() => handleChange(1)} />
             <Button label="-" handleClick = {() => handleChange(-1)} />
 
-        </div>
+        </>
     )
 }
 

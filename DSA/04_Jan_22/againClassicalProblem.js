@@ -1,0 +1,74 @@
+
+  function againClassicalProblem(str){
+    var stack = []
+    for(var i=0;i<str.length;i++){
+        var x = str[i]
+        if(x == '(' || x == '['||x=='{'){
+            stack.push(x)
+            continue;
+        }
+        if(stack.length == 0){
+            return false;
+        }
+        var check;
+        switch (x) {
+            case '}':
+                 check = stack.pop()
+                 if(x == '(' || x == '[')
+                   return false;
+                break;
+            case ']':
+                    check = stack.pop()
+                    if(x == '(' || x == '{')
+                      return false;
+                   break;
+            case ')':
+                 check = stack.pop()
+                 if(x == '{' || x == '[')
+                   return false;
+                break;
+                
+        }
+        
+    }
+    return (stack.length == 0)
+    
+
+  }
+
+
+
+  function runProgram(input) {
+      input = input.trim().split("\n")
+      var testCases = +input[0]
+      var line = 1
+      for (var i = 0; i < testCases; i++){
+        var str = line++
+        
+        if(againClassicalProblem(str)){
+            console.log("balanced");
+        } else{
+            console.log("not balanced");
+        }
+    }
+ }
+  if (process.env.USERNAME === "akshra") {
+    runProgram('{[(]}');
+  } else {
+    process.stdin.resume();
+    process.stdin.setEncoding("ascii");
+    let read = "";
+    process.stdin.on("data", function (input) {
+      read += input;
+    });
+    process.stdin.on("end", function () {
+      read = read.replace(/\n$/, "");
+      read = read.replace(/\n$/, "");
+      runProgram(read);
+    });
+    process.on("SIGINT", function () {
+      read = read.replace(/\n$/, "");
+      runProgram(read);
+      process.exit(0) ;
+    });
+  }
