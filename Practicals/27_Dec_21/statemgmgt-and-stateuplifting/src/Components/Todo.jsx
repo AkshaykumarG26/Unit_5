@@ -30,11 +30,7 @@ export const Todo = () => {
         updatedData.splice(id,1)
         setList(updatedData)
     }
-    // const removeTodo = index => {
-    //     const newTodos = [...todos];
-    //     newTodos.splice(index, 1);
-    //     setTodos(newTodos);
-    //   };
+    
 
 
 

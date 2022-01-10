@@ -11,6 +11,7 @@ export const TodoInput = ({getData}) => {
 
     const handleClick = () => {
         getData(text)
+        
     }
 
 
