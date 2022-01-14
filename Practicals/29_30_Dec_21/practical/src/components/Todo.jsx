@@ -4,15 +4,19 @@ export const Todo = () => {
   const [text, setText] = useState("");
   const [list, setList] = useState([]);
 
+  // for pagination page and setPage is used
+  const [page, setPage] = useState(1)
+
   useEffect(() => {
     getTodo();
-  }, []);
+  },[page]);
 
   const getTodo = () => {
-    fetch("http://localhost:3001/todos")
+    fetch(`http://localhost:3001/todos?_page=${page}&_limit=5`)
       .then((d) => d.json())
       .then((res) => {
         setList(res);
+
       });
   };
 
@@ -29,21 +33,30 @@ export const Todo = () => {
       },
     }).then(() => {
       getTodo();
+      setText("")
     });
   };
 
   return (
-    <div>
+    <>
       <input
         value={text}
         type="text"
         onChange={(e) => setText(e.target.value)}
       />
       <button onClick={handleTodo}>Add ToDo</button>
-
-      {list.map((e) => (
-        <div>{e.title}</div>
+      <br /><br />
+      {list.map((e,i) => (
+        <div key={i}>{e.title}</div>
       ))}
-    </div>
+      <br /><br />
+
+        {/* Pagination */}
+        <button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</button>
+        <button onClick={() => setPage(page + 1)}>Next</button>
+
+
+
+    </>
   );
 };

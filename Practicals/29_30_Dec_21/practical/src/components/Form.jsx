@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Dummy } from "./Dummy";
+
 
 export const From = () => {
   // useEffect can not be async .... effects call backs are syncronous .... u can write async inside useeffect
@@ -7,8 +7,8 @@ export const From = () => {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
-    return <Dummy />;
-  }, [counter]);
+    console.log("useEffect")
+  }, []);
 
   return (
     <div>
