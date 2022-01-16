@@ -1,3 +1,11 @@
+import { useContext } from "react"
+
+import { CartContext } from "../contexts/CartContext"
+
+
+
+
 export const Cart = () => {
-    return <div>Cart</div>
+    const {cart} = useContext(CartContext)
+    return <div>No. of Cart Items: {cart} </div>
 }
