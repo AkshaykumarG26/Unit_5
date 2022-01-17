@@ -25,8 +25,7 @@ export const Home = () => {
       .then((res) => res.json())
       .then((res) => {
         setData(res);
-      })
-      
+      });
   };
 
   return (
@@ -57,7 +56,7 @@ export const Home = () => {
                 <b>{companyName}</b>
               </Text>
               <Divider />
-              <Table >
+              <Table>
                 <Tbody>
                   <Tr>
                     <Td>Job Title</Td>

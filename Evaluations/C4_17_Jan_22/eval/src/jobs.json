@@ -1,14 +1,24 @@
 {
   "job": [
     {
-      "companyName": "a",
-      "jobTitle": "a",
-      "salaryRange": "a",
-      "jobDescription": "a",
-      "location": "a",
+      "companyName": "Masai",
+      "jobTitle": "DSA Instructor",
+      "salaryRange": "10lpa - 20lpa",
+      "jobDescription": "Instructor, teacher",
+      "location": "Pune",
       "jobType": "",
-      "jobType ": "a",
+      "jobType ": "Remote",
       "id": 1
+    },
+    {
+      "companyName": "Google",
+      "jobTitle": "Full Stack Developer",
+      "salaryRange": "40lpa - 50lpa",
+      "jobDescription": "Developer",
+      "location": "LA",
+      "jobType": "",
+      "jobType ": "Remote",
+      "id": 2
     }
   ]
 }

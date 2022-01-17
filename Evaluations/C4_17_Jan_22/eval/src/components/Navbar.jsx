@@ -8,12 +8,13 @@ export const Navbar = () => {
 
   return (
     <>
-      <Flex h={"80px"}>
+      <Flex h={"80px"} >
+        
         <Center>
-          <Button mr={2} colorScheme={"green"}>
+          <Button mr={20} colorScheme={"green"}>
             <Link to={"/"}>Home</Link>
           </Button>
-          <Button mr={2} colorScheme={"green"}>
+          <Button mr={20} colorScheme={"green"}>
             <Link to={"/dashboard"}>Dashboard</Link>
           </Button>
           <Link to={"/login"}>

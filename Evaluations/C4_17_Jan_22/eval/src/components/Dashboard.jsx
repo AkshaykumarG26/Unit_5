@@ -13,8 +13,7 @@ export const Dashboard = () => {
   };
 
   const [form, setForm] = useState(initState);
-      const navigate = useNavigate();
-  
+  const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -33,19 +32,14 @@ export const Dashboard = () => {
       .then((res) => {
         console.log(res);
         navigate("/");
-      })
+      });
   };
 
   return (
     <>
-      <Container
-        mt={5}
-        rounded={50}
-        border={"2px solid #c0bdbd"}
-        p={10}
-      >
+      <Container mt={5} rounded={30} border={"2px solid #c0bdbd"} p={10}>
         <form onSubmit={handleSubmit}>
-          <VStack rounded={20}>
+          <VStack>
             <Heading color={"gray"}>ADD NEW JOB</Heading>
             <Input
               onChange={handleChange}
@@ -83,7 +77,7 @@ export const Dashboard = () => {
               type="text"
               placeholder="Job type "
             />
-            <Button w={"100%"} colorScheme={"green"} type="submit">
+            <Button w={"50%"} colorScheme={"green"} type="submit">
               Submit
             </Button>
           </VStack>
