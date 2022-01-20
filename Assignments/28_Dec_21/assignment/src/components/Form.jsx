@@ -28,17 +28,12 @@ export const Form = () => {
 
     fetch(`http://localhost:3004/user?_page=${page}&_limit=10`)
       .then((res) => {
-        console.log(res.headers["X-total-count"]);
         return res.json();
       })
       .then((res) => {
-        console.log("res:", res);
-        // console.log(res.headers["X-Total-Count"]);
-
         setForm(res);
       })
       .catch((err) => {
-        console.log(err);
         setIsError(true);
       })
       .finally(() => {
@@ -59,7 +54,6 @@ export const Form = () => {
         getData(page);
       })
       .catch((err) => {
-        console.log(err);
         setIsError(true);
       });
   };
@@ -72,7 +66,6 @@ export const Form = () => {
       },
     })
       .catch((err) => {
-        console.log(err);
         setIsError(true);
       })
       .finally(() => {
@@ -88,11 +81,9 @@ export const Form = () => {
     )
       .then((res) => res.json())
       .then((res) => {
-        // res.sort((a, b) => a.salary - b.salary)
         setForm(res);
       })
       .catch((err) => {
-        console.log(err);
         setIsError(true);
       })
       .finally(() => {
@@ -108,11 +99,9 @@ export const Form = () => {
     )
       .then((res) => res.json())
       .then((res) => {
-        // res.sort((a, b) => b.salary - a.salary)
         setForm(res);
       })
       .catch((err) => {
-        console.log(err);
         setIsError(true);
       })
       .finally(() => {
@@ -121,7 +110,6 @@ export const Form = () => {
   };
 
   const filterDepartment = (depart) => {
-    console.log("working");
     setIsLoading(true);
 
     fetch(
@@ -129,11 +117,9 @@ export const Form = () => {
     )
       .then((res) => res.json())
       .then((res) => {
-        // res = res.filter((element) => element.department === depart)
         setForm(res);
       })
       .catch((err) => {
-        console.log(err);
         setIsError(true);
       })
       .finally(() => {
