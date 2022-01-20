@@ -1,0 +1,22 @@
+{
+  "user": [
+    {
+      "fullName": "Akshay",
+      "age": "26",
+      "city": "Pune",
+      "department": "Developer",
+      "salary": "40000",
+      "isMarried": false,
+      "id": 1
+    },
+    {
+      "fullName": "Amol",
+      "age": "26",
+      "city": "Pune",
+      "department": "Developer",
+      "salary": "45000",
+      "isMarried": true,
+      "id": 2
+    }
+  ]
+}

@@ -1,17 +1,13 @@
+import "./App.css";
 
-import { Table } from './Components/Table';
-import './App.css';
-
-import {FormData} from './Components/EmployeeForm'
+import { Form } from "./components/Form";
 
 function App() {
   return (
     <div className="App">
-      <FormData/>
-      <Table/>
+      <Form />
     </div>
   );
 }
 
 export default App;
-
