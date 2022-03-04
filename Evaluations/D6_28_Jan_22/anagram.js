@@ -1,27 +1,26 @@
 function pashaAndShasha(word1, word2) {
-   var len1 = word1.length;
-   var len2 = word2.length;
-   if(len1 !== len2){
-      console.log("False");
-      return
-   }
-   var str1 = word1.split('').sort().join('');
-   var str2 = word2.split('').sort().join('');
-   if(str1 === str2){
-      console.log("True");
-   } else { 
-      console.log("False");
-   }
+  var len1 = word1.length;
+  var len2 = word2.length;
+  if (len1 !== len2) {
+    console.log("False");
+    return;
+  }
+  var str1 = word1.split("").sort().join("");
+  var str2 = word2.split("").sort().join("");
+  if (str1 === str2) {
+    console.log("True");
+  } else {
+    console.log("False");
+  }
 }
-
 
 function runProgram(input) {
   input = input.trim().split("\n");
-  var testCases = +input[0]
-  var line = 1
-  for (var i = 0; i < testCases; i++){
-    var word1 = input[line++]
-    var word2 = input[line++]
+  var testCases = +input[0];
+  var line = 1;
+  for (var i = 0; i < testCases; i++) {
+    var word1 = input[line++];
+    var word2 = input[line++];
     // console.log(word1, word2)
 
     pashaAndShasha(word1, word2);
